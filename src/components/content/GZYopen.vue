@@ -1,0 +1,13 @@
+<template>
+    <div>
+        查无此人！！
+    </div>
+    <div>不过我认识一个叫YXB的人，你是否是它？</div>
+    <div>
+        <button>是</button>
+        <button>不是</button>
+    </div>
+    <div>
+        原来是你来了啊...哈哈哈哈...好欢迎啊...哈哈哈哈...
+    </div>
+</template>

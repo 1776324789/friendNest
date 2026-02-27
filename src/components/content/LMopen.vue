@@ -1,0 +1,16 @@
+<template>
+    <div>
+        原来是宇宙超级无敌好的刘老师，来来来！请进请进！
+    </div>
+    <div>对了，那游戏你玩了不？</div>
+    <div>
+        <button>玩了</button>
+        <button>啥游戏？</button>
+    </div>
+    <div>
+        有眼光！
+    </div>
+    <div>
+        动森啊！那有时间再玩。
+    </div>
+</template>

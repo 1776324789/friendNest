@@ -1,0 +1,13 @@
+<template>
+    <div>
+        票神同志！本来打算去接你来着。
+    </div>
+    <div>你看我下次想看周杰伦的事情</div>
+    <div>
+        <button>希望不大</button>
+        <button>小事小事</button>
+    </div>
+    <div>
+        我就知道交给你没问题的！来来来这是拖鞋、等一下我去倒茶。
+    </div>
+</template>

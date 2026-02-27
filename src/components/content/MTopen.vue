@@ -1,0 +1,11 @@
+<template>
+    <div>
+        等一下，你进来超过十秒钟不怪叫，我就让你继续呆着。OK？
+    </div>
+    <div>
+        10
+        <div>没问题的</div>
+        <div>怎么可能</div>
+    </div>
+    <div>我服了！死进来！死进来！</div>
+</template>

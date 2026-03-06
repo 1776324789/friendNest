@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>纯爱的龙卷风终于刮到了黄山</title>
+  <link rel="stylesheet" href="/index.css">
+
+  <style>
+    .Toast {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 14px;
+      padding: 15px;
+      border-radius: 15px;
+      position: fixed;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      animation: slideIn 0.35s ease forwards;
+      max-width: 80vw;
+      word-break: break-all;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0.2;
+        transform: translate(-50%, 50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+
+
+</head>
+
+<body bgcolor="#11233a">
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+<script>
+
+
+  function getMaxZIndex() {
+    let maxZIndex = 0; // 初始化最大zIndex为0
+    const elements = document.querySelectorAll('*'); // 选择页面中的所有元素
+
+    elements.forEach((element) => {
+      const zIndex = window.getComputedStyle(element).zIndex; // 获取元素的z-index样式
+
+      if (!isNaN(zIndex)) { // 检查z-index是否为有效数字
+        maxZIndex = Math.max(maxZIndex, parseInt(zIndex, 10)); // 更新最大zIndex
+      }
+    });
+    return maxZIndex;
+  }
+
+  function toast(text, time = 2000) {
+    if (time == null) time = text.length * 250
+    if (time < 2000) time = 2000
+    let toastElement = document.createElement("div")
+    toastElement.classList.add("Toast")
+    toastElement.textContent = text
+    document.body.appendChild(toastElement)
+    toastElement.style.zIndex = getMaxZIndex()
+    setTimeout(() => {
+      document.body.removeChild(toastElement)
+    }, time);
+  }
+
+
+
+  function dc(tag, className) {
+    const element = document.createElement(tag)
+    if (typeof className == "string") {
+      element.classList.add(className)
+    } else {
+      element.classList.add(...className)
+    }
+    element["add"] = (ele) => {
+      element.appendChild(ele)
+      return element
+    }
+    element["txt"] = (txt) => {
+      element.innerText = txt
+      return element
+    }
+    return element
+  }
+
+</script>
+
+</html>

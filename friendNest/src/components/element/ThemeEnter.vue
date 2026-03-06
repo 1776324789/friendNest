@@ -1,6 +1,6 @@
 <template>
 
-    <div>目前的主题是</div>
+    <div>主题列表</div>
     <div>
         纯爱的龙卷风终于刮到了黄山
     </div>

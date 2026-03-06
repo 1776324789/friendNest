@@ -3,15 +3,15 @@
         <div class="mainBlock">
             <div class="badge">先身份核验一下</div>
             <div class="title1">为了验证你是否是自己人</div>
-            <div class="title2">请输入大菠萝对你的称呼/爱称</div>
+            <div class="title2">请输入大菠萝对你的称呼,或者其他关键词</div>
             <input :disabled="disable" v-model="answer" class="input" placeholder="人物的不同会决定展示页面不同。吗？"
                 placeholder-class="placeholder" />
             <div class="tip" v-if="second > -3">
                 <span style="font-weight: bold;font-size: 15px; color: red;">&nbsp;&nbsp;&nbsp;{{ second > 0 ? second :
-                    "哦吼！十秒钟过去了！" }}</span>
+                    0 }}</span>
             </div>
             <div class="tip" v-if="second <= -3">
-                你损失了十秒！！！
+                放个倒计时是不是还蛮唬人的~
             </div>
             <div class="btn" @click="submit">
                 确认提交
@@ -19,6 +19,7 @@
         </div>
     </div>
     <GZYopen></GZYopen>
+    
 </template>
 
 <script setup>
